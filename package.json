@@ -1,7 +1,7 @@
 {
   "name": "yehui-business-components",
   "version": "1.0.0",
-  "description": "react+antd+ts封装的业务组件",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,6 +11,8 @@
     "type": "git",
     "url": "git+https://github.com/yeyeyehui/yehui-business-components.git"
   },
+  "prepare": "husky install",
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -22,7 +24,13 @@
     "@commitlint/config-conventional": "^17.6.3",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^7.0.0",
     "husky": "^8.0.3",
     "validate-commit-msg": "^2.14.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
   }
 }
