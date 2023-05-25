@@ -7,7 +7,6 @@ specifiers:
   cz-conventional-changelog: ^3.3.0
   cz-customizable: ^7.0.0
   husky: ^8.0.3
-  validate-commit-msg: ^2.14.0
 
 devDependencies:
   '@commitlint/cli': 17.6.3
@@ -16,7 +15,6 @@ devDependencies:
   cz-conventional-changelog: 3.3.0
   cz-customizable: 7.0.0
   husky: 8.0.3
-  validate-commit-msg: 2.14.0
 
 packages:
 
@@ -497,16 +495,6 @@ packages:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
     dev: true
 
-  /colors/0.6.2:
-    resolution: {integrity: sha512-OsSVtHK8Ir8r3+Fxw/b4jS1ZLPXkV6ZxDRJQzeD7qo0SqMXWrHDM71DgYzPMHY8SFJ0Ao+nNU2p1MmwdzKqPrw==}
-    engines: {node: '>=0.1.90'}
-    dev: true
-
-  /commander/2.1.0:
-    resolution: {integrity: sha512-J2wnb6TKniXNOtoHS8TSrG9IOQluPrsmyAJ8oCUJOBmv+uLBCyPYAZkD2jFvw2DCzIXNnISIM01NIvr35TkBMQ==}
-    engines: {node: '>= 0.6.x'}
-    dev: true
-
   /commitizen/4.3.0:
     resolution: {integrity: sha512-H0iNtClNEhT0fotHvGV3E9tDejDeS04sN1veIebsKYGMuGscFaswRoYJKmT3eW85eIJAs0F28bG2+a/9wCOfPw==}
     engines: {node: '>= 12'}
@@ -557,10 +545,6 @@ packages:
       compare-func: 2.0.0
       lodash: 4.17.21
       q: 1.5.1
-    dev: true
-
-  /conventional-commit-types/2.3.0:
-    resolution: {integrity: sha512-6iB39PrcGYdz0n3z31kj6/Km6mK9hm9oMRhwcLnKxE7WNoeRKZbTAobliKrbYZ5jqyCvtcVEfjCiaEzhL3AVmQ==}
     dev: true
 
   /conventional-commit-types/3.0.0:
@@ -791,10 +775,6 @@ packages:
       merge: 2.1.1
     dev: true
 
-  /find-parent-dir/0.3.1:
-    resolution: {integrity: sha512-o4UcykWV/XN9wm+jMEtWLPlV8RXCZnMhQI6F6OdHeSez7iiJWePw8ijOlskJZMsaQoGR/b7dH6lO02HhaTN7+A==}
-    dev: true
-
   /find-root/1.1.0:
     resolution: {integrity: sha512-NKfW6bec6GfKc0SGx1e07QZY9PE99u0Bft/0rzSD5k3sO/vwkVUpDUKVm5Gpp5Ue3YfShPFTX2070tDs5kB9Ng==}
     dev: true
@@ -823,15 +803,6 @@ packages:
       is-glob: 4.0.3
       micromatch: 4.0.5
       resolve-dir: 1.0.1
-    dev: true
-
-  /findup/0.1.5:
-    resolution: {integrity: sha1-itkpozk7rGJ5V6fl3kYjsGsOLOs=}
-    engines: {node: '>=0.6'}
-    hasBin: true
-    dependencies:
-      colors: 0.6.2
-      commander: 2.1.0
     dev: true
 
   /fs-extra/11.1.1:
@@ -1655,11 +1626,6 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: true
 
-  /semver-regex/1.0.0:
-    resolution: {integrity: sha512-1vZcoRC+LPtHFkLUPyrabsATDSHerxW+hJBN8h04HZOZBuewbXaNROtUVdEPrTdZsWNq6sfsXDhd48GB2xTG4g==}
-    engines: {node: '>=0.10.0'}
-    dev: true
-
   /semver/5.7.1:
     resolution: {integrity: sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==}
     hasBin: true
@@ -1941,17 +1907,6 @@ packages:
 
   /v8-compile-cache-lib/3.0.1:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
-    dev: true
-
-  /validate-commit-msg/2.14.0:
-    resolution: {integrity: sha1-5Tg2kQEsuycNzAvCpO/+vhSJDqw=}
-    deprecated: Check out CommitLint which provides the same functionality with a more user-focused experience.
-    hasBin: true
-    dependencies:
-      conventional-commit-types: 2.3.0
-      find-parent-dir: 0.3.1
-      findup: 0.1.5
-      semver-regex: 1.0.0
     dev: true
 
   /validate-npm-package-license/3.0.4:
