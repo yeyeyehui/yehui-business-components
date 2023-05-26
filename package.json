@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "webpack serve",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "commit": "cz"
+    "commit": "cz",
+    "addcommit": "git add . && cz"
   },
   "repository": {
     "type": "git",
@@ -25,11 +28,24 @@
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "cz-customizable": "^7.0.0",
-    "husky": "^8.0.3"
+    "hoist-non-react-statics": "^3.3.2",
+    "html-webpack-plugin": "^5.5.1",
+    "husky": "^8.0.3",
+    "ts-loader": "^9.4.3",
+    "typescript": "^5.0.4",
+    "webpack": "^5.84.0",
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.0"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-customizable"
     }
+  },
+  "dependencies": {
+    "@types/react": "^18.2.7",
+    "@types/react-dom": "^18.2.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
