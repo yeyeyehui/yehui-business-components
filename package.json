@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack serve",
     "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src --ext .js, .jsx, .ts, .tsx",
+    "lint:fix": "eslint ./src --ext .js, .jsx, .ts, .tsx --fix",
     "commit": "cz",
     "addcommit": "git add . && cz"
   },
@@ -25,12 +26,23 @@
   "devDependencies": {
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
+    "@types/react": "^18.2.7",
+    "@types/react-dom": "^18.2.4",
+    "@typescript-eslint/eslint-plugin": "^5.59.7",
+    "@typescript-eslint/parser": "^5.59.7",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "cz-customizable": "^7.0.0",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "hoist-non-react-statics": "^3.3.2",
     "html-webpack-plugin": "^5.5.1",
     "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
     "ts-loader": "^9.4.3",
     "typescript": "^5.0.4",
     "webpack": "^5.84.0",
@@ -43,8 +55,6 @@
     }
   },
   "dependencies": {
-    "@types/react": "^18.2.7",
-    "@types/react-dom": "^18.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
