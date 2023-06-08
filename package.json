@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "preinstall": "npx -y only-allow pnpm",
     "commit": "cz",
     "addcommit": "git add . && cz",
-    "test": "jest"
+    "clean": "lerna clean --yes && rm -rf node_modules && pnpm store prune"
   },
   "workspaces": [
     "packages/*"
