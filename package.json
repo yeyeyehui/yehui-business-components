@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "commit": "cz",
-    "addcommit": "git add . && cz",
+    "addCommit": "git add . && cz",
+    "addCommitPush": "git add . && cz && git push",
     "clean": "lerna clean --yes && rm -rf node_modules && pnpm store prune"
   },
   "workspaces": [
