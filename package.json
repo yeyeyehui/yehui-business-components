@@ -2,21 +2,42 @@
   "name": "yehui-business-components",
   "version": "1.0.0",
   "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
   "main": "index.js",
-  "scripts": {
-    "commit": "cz",
-    "addCommit": "git add . && cz",
-    "addCommitPush": "git add . && cz && git push",
-    "clean": "lerna clean --yes && rm -rf node_modules && pnpm store prune"
-  },
   "workspaces": [
     "packages/*"
   ],
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "scripts": {
+    "addCommit": "git add . && cz",
+    "addCommitPush": "git add . && cz && git push",
+    "clean": "rm -rf node_modules **/*/node_modules && pnpm store prune",
+    "commit": "cz",
+    "lint": "npm run lint:es && npm run lint:css",
+    "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
+    "start": "pnpm -C ./packages/components start & pnpm -C ./packages/documentation start"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
   "lint-staged": {
-    "*.{js,ts,jsx,tsx}": "eslint --fix"
+    "*.{md,json}": [
+      "prettier --write --no-error-on-unmatched-pattern"
+    ],
+    "*.{css,less}": [
+      "prettier --write"
+    ],
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --parser=typescript --write"
+    ]
   },
   "config": {
     "commitizen": {
@@ -39,6 +60,8 @@
     "husky": "^8.0.3",
     "lerna": "^6.6.2",
     "lint-staged": "^13.2.2",
-    "prettier": "^2.8.8"
+    "prettier": "^2.8.8",
+    "prettier-plugin-organize-imports": "^3.2.2",
+    "prettier-plugin-packagejson": "^2.4.3"
   }
 }

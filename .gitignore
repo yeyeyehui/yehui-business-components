@@ -9,3 +9,6 @@ temp
 .version
 .versions
 .changelog
+packages/documentation/.dumi/tmp
+packages/documentation/.dumi/tmp-test
+packages/documentation/.dumi/tmp-production
