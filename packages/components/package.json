@@ -2,48 +2,45 @@
   "name": "components",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "webpack serve",
-    "build": "webpack",
-    "test": "jest"
+  "keywords": [],
+  "homepage": "https://github.com/yeyeyehui/yehui-business-components#readme",
+  "bugs": {
+    "url": "https://github.com/yeyeyehui/yehui-business-components/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yeyeyehui/yehui-business-components.git"
   },
-  "prepare": "husky install",
-  "keywords": [],
-  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yeyeyehui/yehui-business-components/issues"
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack serve",
+    "test": "jest"
   },
-  "homepage": "https://github.com/yeyeyehui/yehui-business-components#readme",
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.22.4",
     "@babel/plugin-transform-typescript": "^7.22.3",
     "@babel/preset-env": "^7.22.4",
     "@babel/runtime-corejs3": "^7.22.3",
-    "@types/jest": "^29.5.1",
-    "@types/node": "^20.2.5",
-    "@types/react": "^18.2.7",
-    "@types/react-dom": "^18.2.4",
     "babel-loader": "^9.1.2",
     "babel-runtime": "^6.26.0",
     "hoist-non-react-statics": "^3.3.2",
     "html-webpack-plugin": "^5.5.1",
     "jest": "^29.5.0",
     "mini-css-extract-plugin": "^2.7.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "ts-jest": "^29.1.0",
     "ts-loader": "^9.4.3",
-    "typescript": "^5.0.4",
     "webpack": "^5.84.0",
     "webpack-cli": "^5.1.1",
     "webpack-dev-server": "^4.15.0"
   },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  }
+  "peerDependencies": {
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0"
+  },
+  "prepare": "husky install"
 }
