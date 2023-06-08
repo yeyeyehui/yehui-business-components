@@ -1,5 +1,10 @@
 {
   "packages": ["packages/*"],
+  "command": {
+    "bootstrap": {
+      "hoist": true
+    }
+  },
   "version": "0.0.0",
   "useWorkspaces": true,
   "npmClient": "pnpm"
