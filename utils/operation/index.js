@@ -1,6 +1,6 @@
 const shell = require("shelljs");
 
-const { error } = require("../chalk");
+const { error, greenBright, blueBright } = require("../chalk");
 
 const inquirer = require("../inquirer");
 
@@ -17,7 +17,12 @@ if (node.split(".")[0] < 16) {
   const command = await inquirer();
 
   const progressAvg = progress.start();
-  console.log(command, "command");
+
+  console.log(blueBright(`命令执行中...`));
+
   shell.exec(command);
+
+  console.log(greenBright(`命令执行完毕!`));
+
   progress.stop(progressAvg);
 })();
