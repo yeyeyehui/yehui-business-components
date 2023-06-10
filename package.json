@@ -10,10 +10,8 @@
     "packages/*"
   ],
   "scripts": {
-    "addCommit": "git add . && cz",
-    "addCommitPush": "git add . && cz && git push",
-    "clean": "rm -rf node_modules **/*/node_modules && pnpm store prune",
-    "commit": "cz",
+    "cn": "node ./utils/operation",
+    "preinstall": "npx only-allow pnpm",
     "lint": "npm run lint:es",
     "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
     "start": "pnpm -C ./packages/components start & pnpm -C ./packages/documentation start"
@@ -39,11 +37,6 @@
       "prettier --parser=typescript --write"
     ]
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-customizable"
-    }
-  },
   "devDependencies": {
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
@@ -53,20 +46,23 @@
     "@types/react-dom": "^18.2.4",
     "@typescript-eslint/eslint-plugin": "^5.59.7",
     "@typescript-eslint/parser": "^5.59.7",
+    "chalk": "4.0.0",
+    "cli-progress": "^3.12.0",
     "commitizen": "^4.3.0",
-    "cz-conventional-changelog": "^3.3.0",
-    "cz-customizable": "^7.0.0",
     "eslint": "^8.41.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "fs-extra": "^11.1.1",
     "husky": "^8.0.3",
+    "inquirer": "8.0.0",
     "lerna": "^6.6.2",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
     "prettier-plugin-organize-imports": "^3.2.2",
     "prettier-plugin-packagejson": "^2.4.3",
-    "typescript": "^5.0.4"
+    "shelljs": "^0.8.5",
+    "typescript": "^5.1.3"
   }
 }

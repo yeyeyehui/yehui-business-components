@@ -2,6 +2,19 @@
   "name": "documentation",
   "version": "0.0.1",
   "description": "react业务组件库文档",
+  "keywords": [
+    "business-components",
+    "business",
+    "ant",
+    "component",
+    "components",
+    "design",
+    "framework",
+    "frontend",
+    "react",
+    "react-component",
+    "ui"
+  ],
   "license": "MIT",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -13,7 +26,7 @@
     "build:watch": "father dev",
     "docs:build": "dumi build",
     "doctor": "father doctor",
-    "prepare": "husky install && dumi setup",
+    "prepare": "dumi setup",
     "prepublishOnly": "father doctor && npm run build",
     "start": "dumi dev"
   },
@@ -30,5 +43,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "authors": []
+  "authors": [
+    "叶辉"
+  ]
 }

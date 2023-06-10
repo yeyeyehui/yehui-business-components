@@ -1,8 +1,20 @@
 {
   "name": "components",
   "version": "1.0.0",
-  "description": "",
-  "keywords": [],
+  "description": "react业务组件库",
+  "keywords": [
+    "business-components",
+    "business",
+    "ant",
+    "component",
+    "components",
+    "design",
+    "framework",
+    "frontend",
+    "react",
+    "react-component",
+    "ui"
+  ],
   "homepage": "https://github.com/yeyeyehui/yehui-business-components#readme",
   "bugs": {
     "url": "https://github.com/yeyeyehui/yehui-business-components/issues"
@@ -11,9 +23,13 @@
     "type": "git",
     "url": "git+https://github.com/yeyeyehui/yehui-business-components.git"
   },
-  "license": "ISC",
+  "license": "MIT",
   "author": "",
   "main": "index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "webpack",
     "start": "webpack serve",
@@ -42,5 +58,8 @@
     "react": ">=18.2.0",
     "react-dom": ">=18.2.0"
   },
+  "authors": [
+    "叶辉"
+  ],
   "prepare": "husky install"
 }

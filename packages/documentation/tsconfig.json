@@ -14,3 +14,5 @@
   },
   "include": [".dumi/**/*", ".dumirc.ts", "src/**/*"]
 }
+
+// "prepare": "husky install && dumi setup",
