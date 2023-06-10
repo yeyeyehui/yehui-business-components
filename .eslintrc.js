@@ -5,6 +5,7 @@ module.exports = {
     node: true,
   },
   extends: [
+    "prettier",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:prettier/recommended",
@@ -20,6 +21,7 @@ module.exports = {
   },
   plugins: ["react", "@typescript-eslint", "prettier"],
   rules: {
+    "prettier/prettier": ["error", { endOfLine: "auto" }],
     "import/no-extraneous-dependencies": 0,
     "react/jsx-filename-extension": 0,
     "no-var": "error",

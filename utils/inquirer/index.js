@@ -17,21 +17,26 @@ const {
   CONFIRM_COMMIT,
 } = require("./constant");
 
+let packagesDir = fs.readdirSync("packages");
+
+packagesDir.forEach((name) => {
+  if (name.startsWith(".")) return;
+
+  DIRECTORY.choices.push(PACKAGES_LIST(name));
+});
+
 module.exports = async () => {
   const commandList = [];
 
   const { operation } = await inquirer.prompt([PROMPTS]);
-
-  if (["pnpm add", "pnpm remove"].includes(operation)) {
+  if (["pnpm -C"].includes(operation)) {
     commandList.push(operation);
 
-    let packagesDir = fs.readdirSync("packages");
+    const { directoryName } = await inquirer.prompt([DIRECTORY]);
 
-    packagesDir.forEach((name) => {
-      if (name.startsWith(".")) return;
-
-      DIRECTORY.choices.push(PACKAGES_LIST(name));
-    });
+    commandList.push(directoryName, "start");
+  } else if (["pnpm add", "pnpm remove"].includes(operation)) {
+    commandList.push(operation);
 
     const { directoryName, dependencyName, env } = await inquirer.prompt([
       DIRECTORY,

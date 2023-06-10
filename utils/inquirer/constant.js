@@ -6,7 +6,7 @@ const PROMPTS = {
   choices: [
     {
       name: "start:   启动项目",
-      value: "pnpm -C ./packages/components start & pnpm -C ./packages/documentation start",
+      value: "pnpm -C",
     },
     {
       name: "git:     提交代码",

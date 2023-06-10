@@ -10,11 +10,10 @@
     "packages/*"
   ],
   "scripts": {
-    "cn": "node ./utils/operation",
+    "cf": "node ./utils/operation",
     "preinstall": "npx only-allow pnpm",
     "lint": "npm run lint:es",
-    "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
-    "start": "pnpm -C ./packages/components start & pnpm -C ./packages/documentation start"
+    "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\""
   },
   "commitlint": {
     "extends": [
@@ -49,6 +48,7 @@
     "chalk": "4.0.0",
     "cli-progress": "^3.12.0",
     "commitizen": "^4.3.0",
+    "cross-spawn": "^7.0.3",
     "eslint": "^8.41.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -62,7 +62,6 @@
     "prettier": "^2.8.8",
     "prettier-plugin-organize-imports": "^3.2.2",
     "prettier-plugin-packagejson": "^2.4.3",
-    "shelljs": "^0.8.5",
     "typescript": "^5.1.3"
   }
 }

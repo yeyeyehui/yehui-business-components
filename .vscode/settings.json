@@ -3,6 +3,7 @@
   "eslint.options": {
     "extensions": [".js", ".jsx", "ts", ".tsx"]
   },
+  "files.autoSave": "afterDelay",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
     // "json.schemaDownload.enable": false

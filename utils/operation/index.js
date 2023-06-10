@@ -1,10 +1,10 @@
-const shell = require("shelljs");
+const crossSpawn = require("cross-spawn");
 
 const { error, greenBright, blueBright } = require("../chalk");
 
 const inquirer = require("../inquirer");
 
-const progress = require("../progress");
+// const progress = require("../progress");
 
 const { node } = process.versions;
 
@@ -15,14 +15,16 @@ if (node.split(".")[0] < 16) {
 
 (async () => {
   const command = await inquirer();
+  // console.log(command, args.join(" "), "命令执行中...");
+  // const progressAvg = progress.start();
 
-  const progressAvg = progress.start();
+  console.log(blueBright(`${command} - 命令执行中...`));
 
-  console.log(blueBright(`命令执行中...`));
+  const result = crossSpawn.sync(command, { stdio: "inherit", shell: true });
 
-  shell.exec(command);
+  // console.log(result, "result");
 
-  console.log(greenBright(`命令执行完毕!`));
+  // console.log(greenBright(`命令执行完毕!`));
 
-  progress.stop(progressAvg);
+  // progress.stop(progressAvg);
 })();
