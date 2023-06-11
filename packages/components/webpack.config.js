@@ -16,6 +16,10 @@ module.exports = {
   mode: "development",
   devtool: false,
   entry: "./src/index.tsx",
+  stats: {
+    assets: false,
+    modules: false,
+  },
   output: {
     path: path.join(__dirname, "dist"),
     filename: "[name].[hash:5].js",
