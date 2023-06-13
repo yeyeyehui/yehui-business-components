@@ -3,7 +3,11 @@
 This is an example component.
 
 ```jsx
-import { Foo } from "documentation";
+/**
+ *
+ */
+import { Sandpack } from "@codesandbox/sandpack-react";
+import { Button } from "components-pro";
 
-export default () => <Foo title="Hello dumi!" />;
+export default () => <Button>1111</Button>;
 ```

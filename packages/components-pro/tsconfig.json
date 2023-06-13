@@ -8,11 +8,11 @@
     "esModuleInterop": true,
     "module": "commonjs",
     "target": "ESNext",
-    "jsx": "react-jsx",
+    "jsx": "react",
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
-    },
+    }
   },
   "include": ["./src/**/*"]
 }

@@ -3,11 +3,11 @@
   "version": "0.0.1",
   "description": "react业务组件库文档",
   "keywords": [
-    "business-components",
+    "business-components-pro",
     "business",
     "ant",
     "component",
-    "components",
+    "components-pros",
     "design",
     "framework",
     "frontend",
@@ -31,7 +31,9 @@
     "start": "dumi dev"
   },
   "devDependencies": {
+    "components-pro": "workspace:^1.0.0",
     "dumi": "^2.2.0",
+    "dumi-theme-chakra": "^0.0.18",
     "father": "^4.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

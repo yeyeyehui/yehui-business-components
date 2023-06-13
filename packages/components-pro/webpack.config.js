@@ -4,6 +4,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+const webpack = require("webpack");
+
 const cwd = process.cwd();
 
 const entryHtml = "./static/index.html";
@@ -15,7 +17,7 @@ let isProduction = NODE_ENV === "production";
 module.exports = {
   mode: "development",
   devtool: false,
-  entry: "./src/index.tsx",
+  entry: "./src/index.ts",
   stats: {
     assets: false,
     modules: false,
@@ -157,5 +159,6 @@ module.exports = {
       // filename: "index.[hash:5].html",
     }),
     new MiniCssExtractPlugin(),
+    new webpack.ProgressPlugin(),
   ],
 };

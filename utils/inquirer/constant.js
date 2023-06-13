@@ -48,7 +48,7 @@ const ENVIRONMENT = {
     },
     {
       name: "pro:   生产依赖",
-      value: "-S",
+      value: "-s",
     },
   ],
 };
