@@ -1,7 +1,5 @@
 const path = require("path");
 
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const webpack = require("webpack");
@@ -32,7 +30,7 @@ module.exports = {
   devServer: {
     static: path.join(__dirname, "static"),
     host: "localhost",
-    open: true,
+    // open: true,
     hot: true,
     watchFiles: ["src/**/*.js", "src/**/*.ts", "src/**/*.jsx", "src/**/*.tsx"],
     historyApiFallback: {
@@ -153,12 +151,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: entryHtml,
-      // filename: "index.[hash:5].html",
-    }),
-    new MiniCssExtractPlugin(),
-    new webpack.ProgressPlugin(),
-  ],
+  plugins: [new MiniCssExtractPlugin(), new webpack.ProgressPlugin()],
 };

@@ -31,7 +31,7 @@
     "start": "dumi dev"
   },
   "devDependencies": {
-    "components-pro": "workspace:^1.0.0",
+    "components-pro": "workspace:*",
     "dumi": "^2.2.0",
     "dumi-theme-chakra": "^0.0.18",
     "father": "^4.1.0",
