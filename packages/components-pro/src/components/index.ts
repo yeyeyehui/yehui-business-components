@@ -1,3 +1,2 @@
-export { default as Button } from "./button";
-export type { ButtonProps } from "./button";
-console.log("12345600013200");
+export { default as ButtonModal } from ".//button-modal";
+export type { ButtonModalProps } from "./button-modal";

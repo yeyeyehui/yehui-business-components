@@ -1,7 +1,7 @@
 const PROMPTS = {
   name: "operation",
   type: "list",
-  loop: false,
+  // loop: false,
   message: `请选择需要执行的操作:`,
   choices: [
     {
